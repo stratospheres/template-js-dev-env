@@ -19,5 +19,8 @@
   "devDependencies": {
     "express": "^4.16.2",
     "nsp": "^2.8.1"
+  },
+  "dependencies": {
+    "open": "0.0.5"
   }
 }
