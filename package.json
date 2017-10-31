@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "" // replace me with something like this: "git+https://github.com/stratospheres/template-js-dev-env.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "" // replace me with something like this: "https://github.com/stratospheres/template-js-dev-env/issues"
+    "url": ""
   },
-  "homepage": "" // replace me with something like this: "https://github.com/stratospheres/template-js-dev-env#readme"
+  "homepage": "",
+  "devDependencies": {
+    "nsp": "^2.8.1"
+  }
 }
