@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node build/server.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "security-check": "nsp check",
+    "open:src": "node build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +22,7 @@
   "devDependencies": {
     "chalk": "^2.3.0",
     "express": "^4.16.2",
+    "npm-run-all": "^4.1.1",
     "nsp": "^2.8.1"
   },
   "dependencies": {
