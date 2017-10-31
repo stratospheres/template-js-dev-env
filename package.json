@@ -17,6 +17,7 @@
   },
   "homepage": "",
   "devDependencies": {
+    "express": "^4.16.2",
     "nsp": "^2.8.1"
   }
 }
