@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel security-check open:src",
+    "start": "npm-run-all --parallel security-check open:src localtunnel",
     "security-check": "nsp check",
-    "open:src": "node build/server.js",
+		"open:src": "node build/server.js",
+		"localtunnel": "lt --port 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "devDependencies": {
     "chalk": "^2.3.0",
     "express": "^4.16.2",
+    "localtunnel": "^1.8.3",
     "npm-run-all": "^4.1.1",
     "nsp": "^2.8.1"
   },
