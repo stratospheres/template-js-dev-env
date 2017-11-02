@@ -25,6 +25,28 @@ export default {
   ],
   module: {
     rules: [
+			{
+				test: /\.ts$/, enforce: 'pre', loader: 'tslint-loader',
+				options: {
+						configuration: {
+								rules: {
+										quotemark: [true, 'double']
+								}
+						},
+						configFile: false,
+						emitErrors: true,
+						failOnHint: true,
+						typeCheck: true,
+						fix: false,
+						fileOutput: {
+								dir: './tslint-output/',
+								ext: 'xml',
+								clean: true,
+								header: '<?xml version="1.0" encoding="utf-8"?>\n<checkstyle version="5.7">',
+								footer: '</checkstyle>'
+						}
+				}
+			},
       {test: /\.ts$/, exclude: /node_modules/, loaders: ['ts-loader']},
       {test: /\.css$/, exclude: /node_modules/, loaders: ['style-loader','css-loader']}
     ]

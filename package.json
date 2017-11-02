@@ -7,7 +7,7 @@
     "start": "npm-run-all --parallel security-check open:src localtunnel",
     "security-check": "nsp check",
     "open:src": "ts-node build/server.ts",
-    "localtunnel": "lt --port 8080 --subdomain stratospheres",
+    "localtunnel": "lt --port 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +29,8 @@
     "npm-run-all": "^4.1.1",
     "nsp": "^2.8.1",
     "ts-loader": "^3.1.1",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
     "typescript": "^2.6.1"
   },
   "dependencies": {
