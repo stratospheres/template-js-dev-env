@@ -1,5 +1,7 @@
+/// <reference path="../node_modules/@types/express/index.d.ts" />
 /// <reference path="../node_modules/@types/open/index.d.ts" />
 /// <reference path="../node_modules/@types/node/index.d.ts" />
+/// <reference path="../node_modules/@types/webpack/index.d.ts" />
 
 // only the first of these works... if you try the 2nd, the call to
 // set app = express(); complains that
@@ -16,8 +18,17 @@ import * as path from "path";
 import open = require('open');
 // import * as open from "open";
 
+import webpack = require('webpack');
+import config from "../webpack.config.dev";
+
 const port = 8080;
 const app = express();
+const compiler = webpack(config);
+
+app.use(require('webpack-dev-middleware')(compiler, {
+	noInfo: false,
+	publicPath: config.output.publicPath
+}));
 
 app.get('/', function(req,res) {
 	res.sendFile(path.join(__dirname, '../src/index.html'));
