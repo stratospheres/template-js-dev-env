@@ -28,11 +28,6 @@ export default {
 			{
 				test: /\.ts$/, enforce: 'pre', loader: 'tslint-loader',
 				options: {
-						configuration: {
-								rules: {
-										quotemark: [true, 'double']
-								}
-						},
 						configFile: false,
 						emitErrors: true,
 						failOnHint: true,
