@@ -1,3 +1,7 @@
+# Generated js from Typescript...
+build/**/*.js
+src/**/*.js
+
 # Logs
 logs
 *.log
