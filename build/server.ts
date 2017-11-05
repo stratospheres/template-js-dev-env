@@ -1,8 +1,3 @@
-/// <reference path="../node_modules/@types/express/index.d.ts" />
-/// <reference path="../node_modules/@types/open/index.d.ts" />
-/// <reference path="../node_modules/@types/node/index.d.ts" />
-/// <reference path="../node_modules/@types/webpack/index.d.ts" />
-
 // only the first of these works... if you try the 2nd, the call to
 // set app = express(); complains that
 // xpress_1.default is not a function
