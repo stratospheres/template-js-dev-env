@@ -3,7 +3,8 @@
     "module": "commonjs"
   },
 	"include": [
-			"src/**/*.test.ts"
+			"src/**/*.test.ts",
+			"build/preUnitTest.ts"
 	],
 	"exclude": [
 			"node_modules"

@@ -9,7 +9,7 @@
     "open:src": "ts-node build/server.ts",
     "localtunnel": "lt --port 8080",
 		"preunittest": "tsc -p ./tsconfig.test.json",
-		"unittest": "mocha --reporter progress \"src/**/*.test.js\"",
+		"unittest": "mocha --reporter progress build/preUnitTest.js \"src/**/*.test.js\"",
 		"test": "npm-run-all --sequential unittest"
 },
   "repository": {
