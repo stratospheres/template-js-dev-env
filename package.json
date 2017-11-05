@@ -8,10 +8,10 @@
     "security-check": "nsp check",
     "open:src": "ts-node build/server.ts",
     "localtunnel": "lt --port 8080",
-		"preunittest": "tsc -p ./tsconfig.test.json",
-		"unittest": "mocha --reporter progress build/preUnitTest.js \"src/**/*.test.js\"",
-		"test": "npm-run-all --sequential unittest"
-},
+    "preunittest": "tsc -p ./tsconfig.test.json",
+    "unittest": "mocha --reporter progress build/preUnitTest.js \"src/**/*.test.js\"",
+    "test": "npm-run-all --sequential unittest"
+  },
   "repository": {
     "type": "git",
     "url": ""
@@ -23,12 +23,14 @@
   },
   "homepage": "",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
     "@types/express": "^4.0.39",
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.47",
     "@types/numeral": "0.0.22",
     "@types/open": "0.0.29",
     "@types/webpack": "^3.0.14",
+    "chai": "^4.1.2",
     "chalk": "^2.3.0",
     "express": "^4.16.2",
     "localtunnel": "^1.8.3",
