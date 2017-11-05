@@ -13,9 +13,11 @@ const jsdom = require("jsdom");
 const {JSDOM} = jsdom;
 
 describe("index.html", () => {
-	it ("should say hello", () => {
+	it ("should say hello", (done) => {
 		const index = fs.readFileSync("./src/index.html", "utf-8");
 		const dom = new JSDOM(index);
 		expect(dom.window.document.querySelector("h1").textContent).to.equal("Hello, world.");
+		done();
+		dom.window.close();
 	});
 });
