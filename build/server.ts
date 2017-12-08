@@ -29,6 +29,16 @@ app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "../src/index.html"));
 });
 
+// simulate a web api call that gets simple user data
+app.get("/users", (req, res) => {
+	res.json([
+		{id: 1, firstName: "Adam", lastName: "Hoffman", email: "adam@company.com"},
+		{id: 2, firstName: "Linda", lastName: "Hoffman", email: "linda@company.com"},
+		{id: 3, firstName: "Archer", lastName: "Hoffman", email: "archer@company.com"},
+		{id: 4, firstName: "Fiona", lastName: "Hoffman", email: "fiona@company.com"}
+	]);
+});
+
 app.listen(port, (err) => {
 	if (err) {
 		console.log(err);

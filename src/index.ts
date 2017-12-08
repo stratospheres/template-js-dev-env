@@ -1,7 +1,18 @@
-/// <reference path="../node_modules/@types/numeral/index.d.ts" />
-
-import * as numeral from "numeral";
 import "./index.css";
 
-const testValue = numeral(1000).format("0,0.00");
-console.log(`I feel like ${testValue}.`);
+import {getUsers} from "./services/userService";
+
+getUsers().then((result) => {
+	let usersBody = "";
+
+	result.forEach((user) => {
+		usersBody += `<tr>
+			<td><a href="#" data-id="$(user.id}" class="deleteUser">Delete</a></td>
+			<td>${user.firstName}</td>
+			<td>${user.lastName}</td>
+			<td>${user.email}</td>
+			`;
+	});
+
+	window.document.getElementById("users").innerHTML = usersBody;
+});

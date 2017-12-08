@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs"
-  },
+		"module": "commonjs",
+		"target": "es5"
+	},
 	"include": [
-			"src/**/*"
+			"src/**/*.ts"
 	],
 	"exclude": [
 			"node_modules",

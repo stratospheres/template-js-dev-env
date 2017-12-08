@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "tsc -p ./tsconfig.json",
     "start": "npm-run-all --parallel security-check open:src localtunnel",
     "security-check": "nsp check",
     "open:src": "ts-node build/server.ts",
@@ -23,8 +24,11 @@
   },
   "homepage": "",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/chai": "^4.0.4",
+    "@types/es6-promise": "0.0.33",
     "@types/express": "^4.0.39",
+    "@types/isomorphic-fetch": "0.0.34",
     "@types/jsdom": "^11.0.3",
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.47",
@@ -45,7 +49,9 @@
     "typescript": "^2.6.1"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "css-loader": "^0.28.7",
+    "es6-promise": "^4.1.1",
     "inline-source-map": "^0.6.2",
     "numeral": "^2.0.6",
     "open": "0.0.5",

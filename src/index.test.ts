@@ -16,7 +16,7 @@ describe("index.html", () => {
 	it ("should say hello", (done) => {
 		const index = fs.readFileSync("./src/index.html", "utf-8");
 		const dom = new JSDOM(index);
-		expect(dom.window.document.querySelector("h1").textContent).to.equal("Hello, world.");
+		expect(dom.window.document.querySelector("h1").textContent).to.equal("Users");
 		done();
 		dom.window.close();
 	});
